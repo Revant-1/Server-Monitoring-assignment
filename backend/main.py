@@ -5,6 +5,11 @@ from database import SessionLocal, engine, Base
 from models import Server, Alert, Metric
 from mock_data import generate_mock_data
 import logging
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -12,11 +17,13 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Server Monitoring API", version="1.0.0")
 
+# Get allowed origins from environment variable or use default
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+
 # CORS configuration
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["http://localhost:3000", "https://your-frontend.vercel.app"],  # Update with deployed frontend URL
-    allow_origins=["*"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
