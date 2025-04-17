@@ -2,7 +2,7 @@
 
 A modern, responsive dashboard for monitoring server performance metrics in real-time.
 
-![Dashboard Screenshot](./public/dashboard-screenshot.png)
+![Dashboard Screenshot]([https://github.com/Revant-1/Server-Monitoring-assignment/blob/main/dashboard.png])
 
 ## Features
 
