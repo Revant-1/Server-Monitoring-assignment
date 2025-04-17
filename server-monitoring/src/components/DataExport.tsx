@@ -25,10 +25,6 @@ export const DataExport = () => {
   });
 
   // Get all servers for full export option
-  const { data: allServers } = useQuery({
-    queryKey: ['servers'],
-    queryFn: api.getServers,
-  });
 
   const handleExport = () => {
     setIsExporting(true);

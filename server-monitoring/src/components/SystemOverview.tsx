@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
-import { api, Server } from '../services/api';
+import { api,} from '../services/api';
 import { useStore } from '../store/useStore';
-import { ArrowDownIcon, ArrowUpIcon, ServerStackIcon, BoltIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { ArrowUpIcon, ServerStackIcon, BoltIcon, ClockIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 
 export const SystemOverview = () => {
