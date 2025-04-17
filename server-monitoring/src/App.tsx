@@ -1,34 +1,12 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ServerList } from './components/ServerList.tsx';
-import { MetricsChart } from './components/MetricsChart';
-import { Alerts } from './components/Alerts';
 import { Header } from './components/Header';
 import { useStore } from './store/useStore';
-import { SystemOverview } from './components/SystemOverview';
-import { NetworkTrafficChart } from './components/NetworkTrafficChart';
-import { PerformanceInsights } from './components/PerformanceInsights';
 import { Navigation, MobileNavigation } from './components/Navigation';
 import { DashboardPage } from './pages/DashboardPage';
 import { AnalyticsPage } from './pages/AnalyticsPage';
 import { ExportPage } from './pages/ExportPage';
 
-// Create a placeholder component for pages not yet implemented
-const PlaceholderPage = ({ title }: { title: string }) => {
-  const { isDarkMode } = useStore();
-  return (
-    <div className={`flex items-center justify-center p-12 rounded-xl shadow-lg ${
-      isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'
-    }`} style={{ minHeight: '300px' }}>
-      <div className="text-center">
-        <h2 className="text-2xl font-bold mb-4">{title} Page</h2>
-        <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-          This page is coming soon. Check back later for updates!
-        </p>
-      </div>
-    </div>
-  );
-};
 
 const queryClient = new QueryClient({
   defaultOptions: {
