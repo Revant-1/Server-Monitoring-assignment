@@ -2,7 +2,11 @@
 
 A modern, responsive dashboard for monitoring server performance metrics in real-time.
 
-![Dashboard Screenshot](./public/dashboard-screenshot.png)
+![Dashboard](https://github.com/user-attachments/assets/88c7ee8b-84e5-4e96-99d6-bab3427c24f7)
+![Analytics-page](https://github.com/user-attachments/assets/12cd6dbe-c607-41ab-a383-5e9431ed3f08)
+![Export-page](https://github.com/user-attachments/assets/f87e94a5-64cf-4b09-8037-b3d6cd6e4ff1)
+
+
 
 ## Features
 
@@ -155,9 +159,6 @@ Special attention was paid to the user experience:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
 
